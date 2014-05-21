@@ -1,2 +1,3 @@
 key "0b1a6bd4a16e2578988a554349e04ccbb45f95282496405f2e7cb360aa9cb5c4";
 remote ipv4 "urbach.mesh.freifunk-flensburg.de" port 10000;
+remote ipv6 "urbach.mesh.freifunk-flensburg.de" port 10000;
