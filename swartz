@@ -1,0 +1,3 @@
+key "d23478a93dc20d21e3d3d1d38c018fe4829f8cd049feb38e38848becd1e1e29a";
+remote ipv4 "swartz.mesh.freifunk-flensburg.de" port 10000;
+remote ipv6 "swartz.mesh.freifunk-flensburg.de" port 10000;
