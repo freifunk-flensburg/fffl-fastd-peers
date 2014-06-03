@@ -17,7 +17,7 @@ git pull -q
 revision_new=$(getCurrentVersion)
 
 # if sha-1 changed, make fastd reload the keys
-if [ "$revision_old" != "$revision_new" ]
+if [ "$revision_current" != "$revision_new" ]
 then
 	kill -HUP $(pidof fastd)
 fi
