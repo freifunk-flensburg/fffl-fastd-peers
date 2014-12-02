@@ -1,1 +1,2 @@
 key "1eeae0c4bfcc85c54ff8d32a1f3f15ae058ca75080a0052a00f8e59a335f3b76";
+remote ipv4 "snowden.mesh.freifunk-flensburg.de" port 10006;
