@@ -1,3 +1,4 @@
 key "4cddee3a49457c21b3993b8cf1f4c9837f40f71af970452c81ed1175a3ba33b6";
 remote ipv4 "gw02.mesh.freifunk-flensburg.de" port 10006;
+remote ipv6 "gw02.mesh.freifunk-flensburg.de" port 10006;
 float yes;
