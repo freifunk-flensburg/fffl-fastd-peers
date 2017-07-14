@@ -3,19 +3,29 @@ Fastd peers of Freifunk Flensburg Gateways
 
 For the gateway to be able to connect to the other gateways and nodes known in the network, you need to get a bunch of files with the public keys for these. For Freifunk Nord for example, this looks like this:
 
+```
 git clone https://github.com/freifunk-flensburg/fffl-fastd-peers /etc/fastd/vpn/peers
+```
 reload fastd without quitting:
 
+```
 killall -HUP fastd
+```
+
 if it says "no process found", its because you just installed it and it doesn't run, so just start it:
 
+```
 service fastd start
+```
 
 Regularly update the peers via cron.
 
+```
 nano /etc/fastd/reloadPeers.sh
+```
 
-////////////////////////////////////////////////////////////////////////
+
+```
 #!/bin/sh
 
 # hop into correct directory to avoid cron pwd sucks
@@ -39,15 +49,20 @@ if [ "$revision_current" != "$revision_new" ]
 then
  kill -HUP $(pidof fastd)
 fi
-
-/////////////////////////////////////////////////////////////////////
+```
 
 make the script executable:
 
+```
 chmod +x /etc/fastd/reloadPeers.sh
+```
 
 and add these lines in cron with
 
+```
 sudo crontab -e
+```
+```
 # Regularly update the fastd peers
 */5 * * * * /etc/fastd/reloadPeers.sh
+```
